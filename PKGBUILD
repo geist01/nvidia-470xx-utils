@@ -6,7 +6,7 @@
 pkgbase=nvidia-470xx-utils
 pkgname=('nvidia-470xx-utils' 'opencl-nvidia-470xx' 'nvidia-470xx-dkms')
 pkgver=470.161.03
-pkgrel=2
+pkgrel=1
 arch=('x86_64')
 url="http://www.nvidia.com/"
 license=('custom')
@@ -54,7 +54,6 @@ DEST_MODULE_LOCATION[4]="/kernel/drivers/video"' dkms.conf
 
     # Gift for linux-rt guys
     sed -i 's/NV_EXCLUDE_BUILD_MODULES/IGNORE_PREEMPT_RT_PRESENCE=1 NV_EXCLUDE_BUILD_MODULES/' dkms.conf
-
 }
 
 package_opencl-nvidia-470xx() {
